@@ -1,15 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 17:39:00 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/04 18:14:44 by cauvray          ###   ########.fr       */
+/*   Created: 2024/07/04 22:48:35 by cauvray           #+#    #+#             */
+/*   Updated: 2024/07/04 22:57:03 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_str_is_printable(char *str)
 {
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] < ' ' || str[i] > '~')
+			return (0);
+		i++;
+	}
+	return (1);
 }
