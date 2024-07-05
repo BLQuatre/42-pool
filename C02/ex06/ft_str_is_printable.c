@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 22:48:35 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/04 22:57:03 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:39:41 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < ' ' || str[i] > '~')
+		if (str[i] < 32 || str[i] == 127)
 			return (0);
 		i++;
 	}
