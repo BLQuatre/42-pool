@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 09:33:25 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/08 13:53:17 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/08 17:13:18 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,17 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		{
+			if (s1[i] > s2[i])
+				return (1);
+			else
+				return (-1);
+		}
 		i++;
 	}
+
+
+
+
 	return (0);
 }
