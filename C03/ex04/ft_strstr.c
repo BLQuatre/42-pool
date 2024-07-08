@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:57:58 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/08 16:42:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/08 17:29:32 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@ char	*ft_strstr(char *str, char *to_find)
 	finded = NULL;
 	i = 0;
 	while (str[i])
+	{
 		j = 0;
 		while (str[i + j] == to_find[j])
 		{
 			if (!finded)
-				finded = &str[i]
-			}
-			j++;
+				finded = &str[i];
 
-			if (to_find[j] == "\0")
+			if (to_find[j] == '\0')
 				return (finded);
+			j++;
 		}
 		i++;
-	{
-
+	}
+	return (finded);
 }
