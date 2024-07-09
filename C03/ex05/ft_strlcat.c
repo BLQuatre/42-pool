@@ -6,11 +6,9 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 18:25:54 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/08 18:38:10 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/09 10:59:02 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 unsigned int	ft_strlen(char *str)
 {
@@ -22,7 +20,7 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strncat(char *dest, char *src, unsigned int size)
+char	*ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	dest_len;
 	unsigned int	i;
