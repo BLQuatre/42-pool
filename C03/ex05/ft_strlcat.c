@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 18:25:54 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/09 10:59:02 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/10 00:32:01 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,23 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	dest_len;
+	unsigned int	src_len;
 	unsigned int	i;
 
 	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+
+	if (size <= dest_len)
+		return size + src_len;
 	i = 0;
-	while (i < size && src[i])
+	while (src[i] && dest_len + i  < size - 1)
 	{
 		dest[dest_len + i] = src[i];
 		i++;
 	}
-	while (i < size)
-	{
-		dest[dest_len + i] = '\0';
-		i++;
-	}
-	return (dest);
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
 }
