@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 22:09:27 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/09 15:53:06 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/09 22:58:49 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	unsigned int	i;
 	unsigned int	src_len;
 
-	i = 0;
 	src_len = ft_strlen(src);
-	size -= 1;
-	while (src[i])
+	if (size == 0)
+		return (src_len);
+	i = 0;
+	while (i < size - 1 && src[i])
 	{
 		dest[i] = src[i];
 		i++;
