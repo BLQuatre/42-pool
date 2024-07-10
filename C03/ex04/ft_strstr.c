@@ -6,9 +6,11 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:57:58 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/10 10:10:40 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/10 11:58:20 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
