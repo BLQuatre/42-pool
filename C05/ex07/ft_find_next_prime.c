@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:07:42 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/10 21:11:53 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/10 21:14:43 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
+int	ft_is_prime(int nb)
 {
-	int	pow;
+	int	i;
 
-	if (power < 0)
+	if (nb < 2)
 		return (0);
-	if (power == 0)
-		return (1);
-	pow = nb;
-	while (--power > 0)
-		pow *= nb;
-	return (pow);
+	i = 2;
+	while (i < nb - 1)
+	{
+		if (nb % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	nb++;
+	while (!(ft_is_prime(nb)))
+		nb++;
+	return (nb);
 }
