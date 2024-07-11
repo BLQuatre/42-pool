@@ -6,7 +6,7 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:07:42 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/10 21:14:43 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/11 10:43:36 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	nb++;
 	while (!(ft_is_prime(nb)))
 		nb++;
 	return (nb);
