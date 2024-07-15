@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 14:52:15 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/11 15:54:38 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/15 22:27:51 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,6 @@ char	*ft_strdup(char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char *src = "ATTAQUE";
-	char *dest = ft_strdup(src);
-	printf("%s - %s\n", src, dest);
-	src = "magic";
-	printf("%s - %s\n", src, dest);
-}
-*/

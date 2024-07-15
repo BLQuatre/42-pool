@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 12:45:56 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 13:36:26 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/15 23:30:50 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BOOLEAN_H
 # define FT_BOOLEAN_H
+
+# include <unistd.h>
 
 void	ft_putstr(char *str);
 

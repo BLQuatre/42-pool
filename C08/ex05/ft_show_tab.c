@@ -6,12 +6,16 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 18:08:56 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 18:38:47 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/15 23:33:56 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "../ex04/ft_strs_to_tab.c"
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putstr(char *str)
 {
@@ -56,11 +60,11 @@ void	ft_show_tab(struct s_stock_str *par)
 	while (par[i].str)
 	{
 		ft_putstr(par[i].str);
-		ft_putstr("\n");
+		ft_putchar('\n');
 		ft_putnbr(par[i].size);
-		ft_putstr("\n");
+		ft_putchar('\n');
 		ft_putstr(par[i].copy);
-		ft_putstr("\n");
+		ft_putchar('\n');
 		i++;
 	}
 }

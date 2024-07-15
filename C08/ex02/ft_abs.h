@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:09:54 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 14:10:47 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/15 22:43:13 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 # define FT_ABS_H
 
 # ifndef ABS
-#  define ABS(Value) {\
-	if (Value < 0)\
-		Value = -Value;\
-	return Value;\
-}
+#  define ABS(Value) (((Value > 0) * 2 - 1) * Value)
 # endif
 #endif
