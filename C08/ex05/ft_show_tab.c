@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 18:08:56 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 23:33:56 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/16 15:16:35 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 void	ft_putchar(char c)
 {

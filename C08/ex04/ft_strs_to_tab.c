@@ -6,11 +6,12 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:42:15 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 23:29:51 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/16 15:14:38 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "ft_stock_str.h"
 
 int	ft_strlen(char *str)
 {
