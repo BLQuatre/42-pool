@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 14:52:15 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 22:27:51 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/16 18:37:20 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ char	*ft_strdup(char *src)
 	char	*dest;
 	int		i;
 
-	dest = (char *) malloc(ft_strlen(src));
+	dest = (char *) malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (src[i])
 	{

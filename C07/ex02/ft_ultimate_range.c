@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 15:57:31 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 22:27:34 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/16 18:40:11 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 		return (0);
 	}
 	tab_len = max - min;
-	*range = (int *) malloc(tab_len * 4);
+	*range = (int *) malloc(sizeof (int) * tab_len);
 	if (*range == NULL)
 		return (-1);
 	i = 0;

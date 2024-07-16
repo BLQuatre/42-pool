@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:03:32 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/15 22:19:23 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/16 18:41:45 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_strslen(char **strs, int size, char *sep)
 	len = 0;
 	while (i < size)
 	{
-		len += ft_strlen(strs[i]);
+		len += ft_strlen(strs[i]) + 1;
 		i++;
 	}
 	len += (size - 1) * ft_strlen(sep) + 1;
