@@ -1,4 +1,4 @@
-
+LIB_NAME = libft.a
 
 MY_SRCS = srcs/ft_putchar.c \
 	  srcs/ft_swap.c \
@@ -16,12 +16,17 @@ CFLAGS += -Wall -Wextra -Werror
 
 
 
+all: libft.a
 
+libft.a:
+	echo lib
 
+clean:
+	rm ${MY_OBJS} -f
 
+cleanf: clean
+	rm libft.a -f
 
-
-
-
-
+re: fclean
+	echo re
 
