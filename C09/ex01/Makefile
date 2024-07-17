@@ -1,32 +1,40 @@
-LIB_NAME = libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cauvray <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/07/17 15:20:14 by cauvray           #+#    #+#              #
+#    Updated: 2024/07/17 16:40:17 by cauvray          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-MY_SRCS = srcs/ft_putchar.c \
-	  srcs/ft_swap.c \
-	  srcs/ft_putstr.c \
-	  srcs/ft_strlen.c \
-	  srcs/ft_strcmp.c
+NAME = libft.a
 
-MY_OBJS = ${MY_SRCS:.c=.o}
+SRCS = ft_putchar.c \
+       ft_swap.c \
+       ft_putstr.c \
+       ft_strlen.c \
+       ft_strcmp.c
 
-CFLAGS += -Wall -Wextra -Werror
+OBJS = $(addprefix srcs/, ${SRCS:.c=.o})
 
-
-
-
-
+%.o : %.c
+	gcc -Wall -Wextra -Werror -c -Iincludes $< -o ${<:.c=.o}
 
 
-all: libft.a
+${NAME}:	${OBJS}
+	ar -rcs $@ $^
 
-libft.a:
-	echo lib
+all:	${NAME}
 
 clean:
-	rm ${MY_OBJS} -f
+	rm ${OBJS} -f
 
-cleanf: clean
-	rm libft.a -f
+fclean:	clean
+	rm ${NAME} -f
 
-re: fclean
-	echo re
+re:	fclean all
 
+.PHONY:	all clean fclean re
