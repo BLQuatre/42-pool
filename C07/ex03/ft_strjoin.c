@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:03:32 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/17 09:50:42 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/17 11:44:44 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	char	*str;
 	int		i;
 
+	if (size <= 0)
+	{
+		str = (char *) malloc(sizeof (char) * 1);
+		str = "";
+		return (str);
+	}
 	str = (char *) malloc(ft_strslen(strs, size, sep));
 	if (!str)
 		return (NULL);
