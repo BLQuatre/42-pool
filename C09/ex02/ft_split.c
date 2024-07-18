@@ -6,12 +6,11 @@
 /*   By: cauvray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 16:51:13 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/18 14:06:17 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/18 17:27:55 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+#include <stdlib.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -51,8 +50,9 @@ int	ft_nextsep(char *str, char *charset)
 
 	i = 0;
 	while (str[i] && (!ft_charstr(str[i], charset)))
-
-
+		i++;
+	return (i);
+}
 
 int	ft_countwords(char *str, char *charset)
 {
@@ -65,7 +65,7 @@ int	ft_countwords(char *str, char *charset)
 	flag = 1;
 	while (str[i])
 	{
-		if (ft_charinstr(str[i], charset))
+		if (ft_charstr(str[i], charset))
 		{
 			flag = 1;
 		}
@@ -83,39 +83,45 @@ int	ft_countwords(char *str, char *charset)
 char	**ft_split(char *str, char *charset)
 {
 	char	**tab;
-	int	i;
-	char	flag;
-	
+	char	*tmpstr;
+	int		i;
+	int		nextsep;
+	int		wordc;
 
-	*tab = (char *) malloc(ft_strs(str, charset));
 	i = 0;
-
-	while (str[i])
+	nextsep = 0;
+	tmpstr = str;
+	wordc = ft_countwords(str, charset);
+	tab = (char **) malloc(sizeof (char *) * (wordc + 1));
+	if (!tab)
+		return (0);
+	while (i < wordc)
 	{
-		if (ft_charinstr(str[i], charset))
-		{
-			flag = *str;
-		}
-		else
-		{
-
-	
-
-
-
-
-
-	
+		nextsep = ft_nextsep(tmpstr, charset);
+		tab[i] = (char *) malloc(sizeof(char) * (nextsep + 1));
+		ft_strncpy(tab[i], tmpstr, nextsep);
+		tmpstr += (nextsep + 1);
+		while (ft_charstr(*tmpstr, charset) && *tmpstr)
+			tmpstr++;
+		i++;
+	}
+	tab[i] = 0;
+	return (tab);
 }
 
+/*
+#include <stdio.h>
 int	main(int argc, char *argv[])
 {
 	if (argc != 3)
 		return (0);
-	printf("%d", ft_strs(argv[1], argv[2]));
-	char **tab = ft_split(argv[1], argv[2]);
-	int i = 0;
+	printf("%d\n", ft_countwords(argv[1], argv[2]));
+	char	**tab = ft_split(argv[1], argv[2]);
+	int 	i = 0;
 	while (tab[i])
 	{
-		prinf("%s\n")
+		printf("%s\n", tab[i]);
+		i++;
+	}
 }
+*/
