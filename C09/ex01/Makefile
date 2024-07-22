@@ -6,7 +6,7 @@
 #    By: cauvray <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/17 15:20:14 by cauvray           #+#    #+#              #
-#    Updated: 2024/07/17 16:40:17 by cauvray          ###   ########.fr        #
+#    Updated: 2024/07/19 11:37:57 by cauvray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,11 @@ SRCS = ft_putchar.c \
 
 OBJS = $(addprefix srcs/, ${SRCS:.c=.o})
 
-%.o : %.c
-	gcc -Wall -Wextra -Werror -c -Iincludes $< -o ${<:.c=.o}
+CC = gcc
+CFLAGS += -Wall -Wextra -Werror
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -Iincludes $< -o $@
 
 
 ${NAME}:	${OBJS}
