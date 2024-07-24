@@ -1,14 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-
-
-C_FILES=$(find . -type f -name "*.c" -print0 | xargs -0 -n1 basename)
-
-for i in $C_FILES
-do
-	gcc -c $i
-done
-
-O_FILES=$(find . -type f -name "*.o" -print0 | xargs -0 -n1 basename)
-
-gcc -shared $O_FILES -o libft.a
+gcc -Wall -Wextra -Werror -c ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
+ar -rcs libft.a ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o
+rm *.o
