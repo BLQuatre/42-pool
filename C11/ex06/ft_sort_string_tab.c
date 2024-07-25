@@ -6,13 +6,13 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 10:58:58 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/25 11:39:49 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/25 11:45:05 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(char **a, char **b)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = *a;
 	*a = *b;

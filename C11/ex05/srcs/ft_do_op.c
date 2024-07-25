@@ -6,14 +6,14 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 02:40:44 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/25 03:29:30 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/25 11:44:49 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_do_op.h"
 #include <unistd.h>
 
-int ft_do_op(char op, int a, int b)
+int	ft_do_op(char op, int a, int b)
 {
 	if (op == '+')
 		return (ft_add(a, b));
@@ -22,30 +22,15 @@ int ft_do_op(char op, int a, int b)
 	else if (op == '*')
 		return (ft_mul(a, b));
 	else if (op == '/')
-	{
-		if (b == 0)
-		{
-			write(1, "Stop : division by zero", 20);
-			return (-1);
-		}
 		return (ft_div(a, b));
-	}
 	else if (op == '%')
-	{
-		if (b == 0)
-		{
-			write(1, "Stop : modulo by zero", 20);
-			return (-1);
-		}
 		return (ft_mod(a, b));
-	}
 	else
 		return (0);
 }
 
 void	ft_check_op(char op, int n1, int n2)
 {
-
 	if (op == '/' && n2 == 0)
 		write (1, "Stop : division by zero", 23);
 	else if (op == '%' && n2 == 0)
