@@ -1,29 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 02:17:11 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/25 02:08:37 by cauvray          ###   ########.fr       */
+/*   Created: 2024/07/25 02:52:16 by cauvray           #+#    #+#             */
+/*   Updated: 2024/07/25 02:55:15 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int	i;
-
-	i = 0;
-	while (i < length)
-	{
-		f(tab[i]);
-		i++;
-	}
-}
-
-/*
-#include <stdlib.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -53,22 +39,3 @@ void	ft_putnbr(int n)
 	}
 	ft_putchar('0' + n);
 }
-
-int main (void)
-{
-	int	i;
-	int *tab;
-	int tab_len;
-
-	tab_len = 10;
-	tab = malloc(tab_len * sizeof(int));
-	i = 0;
-	while (i < tab_len)
-	{
-		tab[i] = i;
-		i++;
-	}
-	ft_foreach(tab, tab_len, &ft_putnbr);
-	return (0);
-}
-*/
