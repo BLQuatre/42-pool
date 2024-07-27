@@ -6,7 +6,7 @@
 /*   By: cauvray <cauvray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:15:13 by cauvray           #+#    #+#             */
-/*   Updated: 2024/07/24 18:49:37 by cauvray          ###   ########.fr       */
+/*   Updated: 2024/07/27 23:23:41 by cauvray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_read_first_line(char *file)
 	return (ret);
 }
 
-char	*ft_read_first_line_std()
+char	*ft_read_first_line_std(void)
 {
 	char	*buff;
 	int		size;
